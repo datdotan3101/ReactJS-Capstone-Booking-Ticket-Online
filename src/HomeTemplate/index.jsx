@@ -6,9 +6,13 @@ import Footer from "./_component/Footer";
 export default function HomeTemplate() {
   return (
     <div>
-      <Header />
+      <header>
+        <Header />
+      </header>
       <Outlet />
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

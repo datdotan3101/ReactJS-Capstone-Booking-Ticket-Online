@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
 .carousel-image {
   width: 100%;
   height: 600px;
