@@ -1,13 +1,19 @@
 @charset "UTF-8";
-.swiper-button-next,
-.swiper-button-prev {
-  color: #ffffff; /* Màu của nút điều hướng */
+.seat {
+  width: 48px; /* Đảm bảo tất cả ghế có cùng chiều rộng */
+  height: 48px;
+  display: inline-flex; /* Giúp ghế hiển thị cùng hàng */
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 5px;
+  white-space: nowrap; /* Ngăn số ghế bị xuống dòng */
 }
 
-.swiper-pagination-bullet {
-  background-color: #ffffff; /* Màu của pagination */
+.seatSold {
+  background-color: red;
 }
 
-.swiper-pagination-bullet-active {
-  background-color: #ff0000; /* Màu của pagination khi active */
+.seatChoosing {
+  background-color: green;
 }/*# sourceMappingURL=style.css.map */

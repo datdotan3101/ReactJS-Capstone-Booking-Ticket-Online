@@ -1,0 +1,17 @@
+.seat {
+  width: 48px; 
+  height: 48px;
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 5px;
+  white-space: nowrap; 
+}
+
+.seatSold {
+  background-color: red;
+}
+.seatChoosing {
+  background-color: green;
+}
