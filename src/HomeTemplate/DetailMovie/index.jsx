@@ -162,6 +162,12 @@ export default function DetailMovie() {
       )}
       {/* Lịch chiếu  */}
       <div>{ListCinesLogo()}</div>
+      <div className="mt-10">
+        <h2 className="text-3xl font-bold mb-4">Lịch Chiếu</h2>
+        {listScheduleMovie.data?.heThongRapChieu.map((heThongRap) => (
+          <CineSchedule key={heThongRap.maHeThongRap} heThongRap={heThongRap} />
+        ))}
+      </div>
     </div>
   );
 }

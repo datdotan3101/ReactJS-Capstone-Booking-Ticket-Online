@@ -2,7 +2,6 @@ import { Route } from "react-router-dom";
 import AdminTemplate from "../AdminTemplate";
 import HomeTemplate from "../HomeTemplate";
 import HomePage from "../HomeTemplate/HomePage";
-import Cines from "../HomeTemplate/RapChieuPhim";
 import DetailMovie from "../HomeTemplate/DetailMovie";
 import DatVe from "../HomeTemplate/DatVe/DatVe";
 import LoginPage from "../HomeTemplate/_component/LoginPage";
@@ -21,10 +20,6 @@ const route = [
       {
         path: "detail/:id",
         element: DetailMovie,
-      },
-      {
-        path: "cines",
-        element: Cines,
       },
       {
         path: "dat-ve",
@@ -54,10 +49,10 @@ export const renderHeader = () => {
   return route.map((route) => {
     if (route.children) {
       return (
-        <Route key={route.maPhim} path={route.path} element={<route.element />}>
+        <Route key={route.path} path={route.path} element={<route.element />}>
           {route.children.map((item) => (
             <Route
-              key={item.maPhim}
+              key={item.path}
               path={item.path}
               element={<item.element />}
             />
@@ -66,11 +61,7 @@ export const renderHeader = () => {
       );
     } else {
       return (
-        <Route
-          key={route.maPhim}
-          path={route.path}
-          element={<route.element />}
-        />
+        <Route key={route.path} path={route.path} element={<route.element />} />
       );
     }
   });
